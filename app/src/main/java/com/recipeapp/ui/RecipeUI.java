@@ -50,4 +50,8 @@ public class RecipeUI {
             }
         }
     }
+    private void displayRecipes(){
+        DataHandler dataHandler = new DataHandler();
+        
+    }
 }
