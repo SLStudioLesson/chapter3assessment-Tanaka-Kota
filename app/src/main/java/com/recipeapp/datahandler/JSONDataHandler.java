@@ -6,7 +6,7 @@ import com.recipeapp.model.Recipe;
 public class JSONDataHandler implements DataHandler{
 
     public String getMode(){
-        String JSON = "";
+        String JSON = "JSON";
         return JSON;
     }
     public ArrayList<Recipe> readData(){ //処理の実装は行わないので定義し、nullをreturnしてください。

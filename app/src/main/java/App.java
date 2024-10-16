@@ -20,19 +20,19 @@ public class App {
                 //「1」を選択した場合、CSVDataHandlerインスタンスを生成する
                 // 引数が0個のコンストラクタを実行するものとする
                 CSVDataHandler csvDataHandler = new CSVDataHandler();
-                csvDataHandler.CSVDataHandler();
-                System.out.println("Current mode: CSV");
-                csvDataHandler.RecipeUI();
+                RecipeUI recipe1 = new RecipeUI(csvDataHandler);
+                recipe1.displayMenu();
             } else if(choice.equals("2")) {
                 // 「2」を選択した場合、JSONDataHandlerインスタンスを生成する
                 JSONDataHandler jsonDataHandler = new JSONDataHandler();
-                System.out.println("Current mode: JSON");
-                jsonDataHandler.RecipeUI();
+                RecipeUI recipe2 = new RecipeUI(jsonDataHandler);
+                recipe2.displayMenu();
             } else { //不正な入力（「1」「2」以外）が与えられた場合、CSVDataHandlerインスタンスを生成する
                 CSVDataHandler csvDataHandler = new CSVDataHandler();
-                System.out.println("Current mode: CSV");
-                csvDataHandler.RecipeUI();
+                RecipeUI recipe1 = new RecipeUI(csvDataHandler);
+                recipe1.displayMenu();
             }
+
 
         } catch (Exception e) {
             System.err.println("Error: " + e.getMessage());
