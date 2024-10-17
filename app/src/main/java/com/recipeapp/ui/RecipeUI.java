@@ -106,7 +106,7 @@ public class RecipeUI {
             Recipe recipe = new Recipe(recipeName, ingredients);
 
             CSVDataHandler csvDataHandler = new CSVDataHandler();
-            csvDataHandler.writeDate(recipe);
+            csvDataHandler.writeData(recipe);
             System.out.println("Recipe added successfully.");
 
         } catch (IOException e) {//- IOExceptionを受け取った場合はFailed to add new recipe: 例外のメッセージとコンソールに表示してください。

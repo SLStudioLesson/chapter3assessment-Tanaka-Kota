@@ -13,7 +13,7 @@ public class JSONDataHandler implements DataHandler{
         return null;
         }
 
-    public void writeDate(Recipe recipe){} //処理の実装は行わないので定義のみ行います。
+    public void writeData(Recipe recipe){} //処理の実装は行わないので定義のみ行います。
 
     public ArrayList<Recipe> searchDate(String keyword){ //処理の実装は行わないので定義し、nullをreturnしてください。
         return null;

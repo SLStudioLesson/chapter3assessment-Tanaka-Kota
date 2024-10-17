@@ -13,7 +13,7 @@ public interface DataHandler {
     public ArrayList<Recipe> readData();
 
     // 指定されたRecipeオブジェクトを追加します。
-    public void writeDate(Recipe recipe) throws IOException;
+    public void writeData(Recipe recipe) throws IOException;
 
     // 指定されたキーワードでレシピを検索し、一致するRecipeオブジェクトのリストを返します。
     public ArrayList<Recipe> searchDate(String keyword) throws IOException;

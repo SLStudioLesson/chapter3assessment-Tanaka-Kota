@@ -50,7 +50,7 @@ public class CSVDataHandler implements DataHandler {
 
         // 新しいレシピをrecipes.csvに追加します。
         // レシピ名と材料はカンマ区切りで1行としてファイルに書き込まれます。
-    public void writeDate(Recipe recipe){
+    public void writeData(Recipe recipe){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,true))){
             writer.newLine();
             writer.write(recipe.getName() + ",");
