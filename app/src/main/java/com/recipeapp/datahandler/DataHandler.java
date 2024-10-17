@@ -16,5 +16,5 @@ public interface DataHandler {
     public void writeData(Recipe recipe) throws IOException;
 
     // 指定されたキーワードでレシピを検索し、一致するRecipeオブジェクトのリストを返します。
-    public ArrayList<Recipe> searchDate(String keyword) throws IOException;
+    public ArrayList<Recipe> searchData(String keyword) throws IOException;
     }

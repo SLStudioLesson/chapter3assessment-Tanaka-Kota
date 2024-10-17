@@ -16,7 +16,7 @@ public class App {
             String choice = reader.readLine();
             
             // ユーザーの選択に応じて、CSVDataHandlerまたはJSONDataHandlerのインスタンスを生成する
-            if(choice.equals("1")){ 
+            if(choice.equals("1")){
                 //「1」を選択した場合、CSVDataHandlerインスタンスを生成する
                 // 引数が0個のコンストラクタを実行するものとする
                 CSVDataHandler csvDataHandler = new CSVDataHandler();

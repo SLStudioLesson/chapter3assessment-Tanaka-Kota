@@ -70,7 +70,7 @@ public class CSVDataHandler implements DataHandler {
         }
     } //以降の設問で処理を実装するため定義のみ行います。
 
-    public ArrayList<Recipe> searchDate(String keyword){ //以降の設問で処理を実装するため定義し、nullをreturnしてください。
+    public ArrayList<Recipe> searchData(String keyword){ //以降の設問で処理を実装するため定義し、nullをreturnしてください。
         return null;
     }
 }

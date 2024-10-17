@@ -15,7 +15,7 @@ public class JSONDataHandler implements DataHandler{
 
     public void writeData(Recipe recipe){} //処理の実装は行わないので定義のみ行います。
 
-    public ArrayList<Recipe> searchDate(String keyword){ //処理の実装は行わないので定義し、nullをreturnしてください。
+    public ArrayList<Recipe> searchData(String keyword){ //処理の実装は行わないので定義し、nullをreturnしてください。
         return null;
         }
 }
