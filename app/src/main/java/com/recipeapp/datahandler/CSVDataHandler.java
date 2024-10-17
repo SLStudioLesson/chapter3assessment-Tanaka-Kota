@@ -35,16 +35,12 @@ public class CSVDataHandler implements DataHandler {
             while ((line = reader.readLine()) != null) {
                 String[] line2 = line.split(",");
                 ArrayList<Ingredient> ingredients = new ArrayList<>();
-                Ingredient ingredient = new Ingredient();
-                for (int i = 1 ; i < line.length(); i++ ){
-                    ingredient.setName(line2[i]);
+                for (int i = 1 ; i < line2.length; i++ ){
+                    Ingredient ingredient = new Ingredient(line2[i]);
                     ingredients.add(ingredient);
-                    
-                    Recipe recipe = new Recipe();
-                    recipe.setName(line2[0]);
-                    recipe.setIngredients(ingredients);
-                    readData.add(recipe);
                 }
+                Recipe recipe = new Recipe(line2[0],ingredients);
+                readData.add(recipe);
             }
         } catch (IOException e) { // IOExceptionが発生したときはError reading file: 例外のメッセージとコンソールに表示します。
             System.out.println("Error reading file: " + e.getMessage());
@@ -52,10 +48,19 @@ public class CSVDataHandler implements DataHandler {
         return readData;
     }
 
+        // 新しいレシピをrecipes.csvに追加します。
+        // レシピ名と材料はカンマ区切りで1行としてファイルに書き込まれます。
     public void writeDate(Recipe recipe){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath,true))){
-            writer.newLine();;
-            writer.write(recipe + "," + recipe);
+            writer.newLine();
+            writer.write(recipe.getName() + ",");
+            for(int j = 0 ; j < recipe.getIngredients().size()-1 ; j++){
+                Ingredient ingredient = recipe.getIngredients().get(j);
+                writer.write(ingredient.getName());
+                if (!(j == recipe.getIngredients().size()-2)){
+                    writer.write(",");
+                }
+            }
 
             writer.close();
 
